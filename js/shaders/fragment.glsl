@@ -7,6 +7,7 @@ uniform vec2 uTextureSize;
 varying vec2 vUv;
 
 vec2 getUV(vec2 uv, vec2 texureSize, vec2 planesize){
+	// vec2 tempUV = (uv - vec2(.5)) * 2.;
 	vec2 tempUV = uv - vec2(.5);
 
 	float planeAspect = uPlaneResolution.x / uPlaneResolution.y;
@@ -18,7 +19,7 @@ vec2 getUV(vec2 uv, vec2 texureSize, vec2 planesize){
 	}
 
 
-	tempUV += 0.5;
+	tempUV += vec2(0.5);
 	return tempUV;
 }
 
